@@ -1,0 +1,13 @@
+.fixed-footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+  --background: var(--ion-color-primary);
+}
+
+ion-title{
+  font-size: 3rem;
+  color: var(--ion-color-primary-contrast);
+}

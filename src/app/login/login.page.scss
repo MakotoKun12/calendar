@@ -1,0 +1,28 @@
+
+.center-svg {
+  fill: var(--ion-color-primary);
+  display: block;
+  margin: auto;
+}
+
+.custom-button{
+  margin: 30px;
+}
+
+.custom-card-border{
+  border: 3px solid var(--ion-color-medium);
+}
+
+.custom-title {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.custom-subtitle {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.custom-input {
+  padding: 1.5rem;
+}

@@ -1,0 +1,11 @@
+.custom-header {
+  --background: var(--ion-color-primary);
+  text-align: center;
+  padding: 15px;
+  font-size: 3rem;
+}
+
+ion-title{
+  font-size: 3rem;
+  color: var(--ion-color-primary-contrast);
+}
