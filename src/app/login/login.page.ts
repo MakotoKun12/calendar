@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import {shareSocialOutline, logoFacebook, logoTwitter, logoInstagram} from 'ionicons/icons'
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,11 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router, private alertController: AlertController) { }
+  constructor(private router: Router, private alertController: AlertController) {
+    addIcons({
+      shareSocialOutline, logoFacebook, logoTwitter, logoInstagram
+    });
+  }
 
   ngOnInit() {
   }

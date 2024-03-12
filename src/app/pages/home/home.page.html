@@ -1,33 +1,64 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="customHeader">
       Bienvenido
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card class="chip-container">
+    <ion-card-content>
+      <ion-chip color="chip1">Reinscripciones</ion-chip>
+      <ion-chip color="chip2">Inicio de clases</ion-chip>
+      <ion-chip color="chip3">Reinscripciones tardias</ion-chip>
+      <ion-chip color="chip4">Baja de materias</ion-chip>
+      <ion-chip color="chip5">Suspensiones</ion-chip>
+      <ion-chip color="chip6">Vacaciones</ion-chip>
+      <ion-chip color="chip7">Ceremonia de egresados</ion-chip>
+      <ion-chip color="chip8">Cursos de verano</ion-chip>
+    </ion-card-content>
+  </ion-card>
+
   <ion-grid>
     <ion-row class="ion-align-items-center ion-justify-content-center">
-      <!-- Columna de la imagen de bienvenida -->
-      <ion-col size-md="6">
-        <ion-img
-        src="https://ionic-docs-demo-v7.vercel.app/assets/madison.jpg"
-        alt="The Wisconsin State Capitol building in Madison, WI at night"
-        ></ion-img>
-        <h2 class="ion-padding-top ion-text-center">¡Bienvenido!</h2>
+      <!-- Primera fila de componentes de calendario -->
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-01" [highlightedDates]="highlightedDates.enero" ></ion-datetime>
+        </ion-card-content>
       </ion-col>
-
-      <!-- Columna del componente de calendario -->
-      <ion-col size-md="6">
-          <ion-card-content>
-            <!-- Aquí puedes colocar tu componente de calendario -->
-            <!-- Por ejemplo, si estás utilizando un componente de calendario externo, puedes integrarlo aquí -->
-            <!-- Si estás utilizando un componente de calendario personalizado, puedes agregarlo aquí -->
-            <ion-card style="border: 2px dotted; text-align: center; padding: 20px;">
-              Aquí irá el calendario
-            </ion-card>
-          </ion-card-content>
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-02" [highlightedDates]="highlightedDates.febrero"></ion-datetime>
+        </ion-card-content>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-03" [highlightedDates]="highlightedDates.marzo"></ion-datetime>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <!-- Segunda fila de componentes de calendario -->
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-04" [highlightedDates]="highlightedDates.abril"></ion-datetime>
+        </ion-card-content>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-05" [highlightedDates]="highlightedDates.mayo"></ion-datetime>
+        </ion-card-content>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-content>
+          <ion-datetime class="my-calendar" presentation="date" value="2024-06" [highlightedDates]="highlightedDates.junio"></ion-datetime>
+        </ion-card-content>
       </ion-col>
     </ion-row>
   </ion-grid>

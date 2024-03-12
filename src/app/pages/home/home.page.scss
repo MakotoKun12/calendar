@@ -1,0 +1,73 @@
+.customHeader{
+  padding: 0 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ion-chip {
+  height: 80px; /* Ajusta el valor según tus necesidades */
+  font-size: 20px; /* Ajusta el valor según tus necesidades */
+  line-height: 80px; /* Asegúrate de que el texto esté centrado verticalmente */
+}
+
+.chip-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1.5px solid gray;
+  border-radius: 20px;
+}
+
+ion-chip[color="chip1"] {
+  color: white;
+  font-weight: bold;
+  background-color: #87A922;
+}
+
+ion-chip[color="chip2"] {
+  color: white;
+  font-weight: bold;
+  background-color: #BFEA7C;
+}
+
+ion-chip[color="chip3"] {
+  color: white;
+  font-weight: bold;
+  background-color: #D37676;
+}
+
+ion-chip[color="chip4"] {
+  color: white;
+  font-weight: bold;
+  background-color: #FF8E8F;
+}
+
+ion-chip[color="chip5"] {
+  color: white;
+  font-weight: bold;
+  background-color: #50727B;
+}
+
+ion-chip[color="chip6"] {
+  color: white;
+  font-weight: bold;
+  background-color: #76ABAE;
+}
+
+ion-chip[color="chip7"] {
+  color: white;
+  font-weight: bold;
+  background-color: #FCDC2A;
+}
+
+ion-chip[color="chip8"] {
+  color: white;
+  font-weight: bold;
+  background-color: #EBC49F;
+}
+
+.my-calendar {
+  width: 75%;
+  margin: 0 auto;
+}

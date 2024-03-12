@@ -10,7 +10,7 @@
           <ion-card-content>
             <ion-item class="custom-input">
               <ion-label position="floating">Email</ion-label>
-              <ion-input type="email"></ion-input>
+              <ion-input type="email" required></ion-input>
             </ion-item>
             <ion-button class="custom-button" fill="clear" (click)="forgotPassword()">
               Olvidaste tu contraseña?
@@ -21,6 +21,17 @@
             <ion-button class="custom-button" (click)="login()">
               Next
             </ion-button>
+
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+              <ion-fab-button>
+                <ion-icon name="share-social-outline"></ion-icon>
+              </ion-fab-button>
+              <ion-fab-list side="top">
+                <ion-fab-button href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+                <ion-fab-button href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+                <ion-fab-button href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
           </ion-card-content>
         </ion-card>
     </ion-col>
