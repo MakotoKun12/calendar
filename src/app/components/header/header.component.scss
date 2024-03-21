@@ -1,0 +1,18 @@
+.custom-header {
+  --background: var(--ion-color-primary);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.custom-button{
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+  margin-left: 30px;
+}
+
+ion-title{
+  font-size: 2rem;
+  color: var(--ion-color-primary-contrast);
+  margin-left: 150px;
+}

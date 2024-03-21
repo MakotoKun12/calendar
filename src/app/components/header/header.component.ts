@@ -15,4 +15,8 @@ export class HeaderComponent  implements OnInit {
   login() {
     this.router.navigate(['/main']);
   }
+
+  diary() {
+    this.router.navigate(['/diary']);
+  }
 }

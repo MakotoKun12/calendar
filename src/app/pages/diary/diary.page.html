@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+
+<ion-content>
+  <ion-segment [(ngModel)]="segmentValue">
+    <ion-segment-button value="agenda">
+      <ion-label>Agenda</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="tareas">
+      <ion-label>Tareas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="notas">
+      <ion-label>Notas</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentValue">
+    <app-calendar *ngSwitchCase="'agenda'"></app-calendar>
+    <app-notes *ngSwitchCase="'tareas'"></app-notes>
+  </div>
+
+</ion-content>
+
+<app-footer></app-footer>

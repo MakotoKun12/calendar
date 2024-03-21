@@ -1,26 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import {HeaderModule} from '../../components/header/header.module';
-import { FooterModule } from '../../components/footer/footer.module';
+import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule,HeaderModule, FooterModule]
+  selector: 'app-calendar',
+  templateUrl: './calendar.component.html',
+  styleUrls: ['./calendar.component.scss'],
 })
-export class HomePage implements OnInit {
+export class CalendarComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private alertController: AlertController) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+
+  activities = {
+    '2024-01-22': 'Inscripciones',
+    '2024-01-23': 'Inscripciones',
+    '2024-01-24': 'Inscripciones',
+    '2024-01-29': 'Inicio de clases',
+  };
+
+  async openAlert(event: any) {
+    const selectedDate = event.detail.value;
+    const activities: { [key: string]: string } = this.activities;
+
+    let activity = activities[selectedDate];
+
+    if (!activity) {
+      activity = 'No existe una actividad para esta fecha';
+    }
+
+    const alert = await this.alertController.create({
+      header: 'ACTIVIDAD',
+      message: activity,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 
-  highlightedDates = {
-    enero: [
+  highlightedDates = [
       {
         date: "2024-01-22",
         textColor: '#gray',
@@ -40,9 +59,7 @@ export class HomePage implements OnInit {
         date: '2024-01-29',
         textColor: '#gray',
         backgroundColor: '#BFEA7C'
-      }
-    ],
-    febrero: [
+      },
       {
         date: '2024-02-01',
         textColor: '#gray',
@@ -62,9 +79,7 @@ export class HomePage implements OnInit {
         date: '2024-02-09',
         textColor: '#gray',
         backgroundColor: '#FF8E8F'
-      }
-    ],
-    marzo: [
+      },
       {
         date: '2024-03-18',
         textColor: '#gray',
@@ -95,8 +110,6 @@ export class HomePage implements OnInit {
         textColor: '#gray',
         backgroundColor: '#76ABAE'
       },
-    ],
-    abril: [
       {
         date: '2024-04-01',
         textColor: '#gray',
@@ -127,8 +140,6 @@ export class HomePage implements OnInit {
         textColor: '#gray',
         backgroundColor: '#FCDC2A'
       },
-    ],
-    mayo: [
       {
         date: '2024-05-01',
         textColor: '#gray',
@@ -144,8 +155,6 @@ export class HomePage implements OnInit {
         textColor: '#gray',
         backgroundColor: '#D37676'
       },
-    ],
-    junio: [
       {
         date: '2024-06-24',
         textColor: '#gray',
@@ -170,7 +179,6 @@ export class HomePage implements OnInit {
         date: '2024-06-28',
         textColor: '#gray',
         backgroundColor: '#EBC49F'
-      },
-    ]
-  }
+      }
+  ];
 }

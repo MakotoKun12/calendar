@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
-import {HeaderModule} from '../header/header.module';
-import { LoginModule } from '../login/login.module';
-import { FooterModule } from '../footer/footer.module';
+import {HeaderModule} from '../components/header/header.module';
+import { LoginModule } from '../components/login/login.module';
+import { FooterModule } from '../components/footer/footer.module';
 
 @Component({
   selector: 'app-main',

@@ -1,0 +1,21 @@
+<ion-grid class="ion-align-items-center" style="height: 60vh;">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <ion-card class="custom-card-border">
+        <ion-card-content>
+          <ion-item class="custom-input">
+            <ion-label position="floating">Titulo de la nota</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item class="custom-input">
+            <ion-label position="floating">Contenido de la nota</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <div class="center-button">
+            <ion-button (click)="createNote()">Crear nota</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
